@@ -1,0 +1,34 @@
+<div ng-controller="couponsCtrl as couponsTable">
+ <h1 class="font page-header">Get All Coupons</h1>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">#</th>
+                <th class="font">Amount</th>
+                <th class="font">EndDate</th>
+                <th class="font">ID</th>
+                <th class="font">Image</th>
+                <th class="font">Message</th>
+                <th class="font">Price</th>
+                <th class="font">StartDate</th>
+                <th class="font">Title</th>
+                <th class="font">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="c in couponsTable.coupons">
+                <th class="font" scope="row">{{$index}}</th>
+                <td class="font">{{c.amount}}</td>
+                <td class="font">{{c.endDate}}</td>
+                <td class="font">{{c.id}}</td>
+                <td class="font">{{c.image}}</td>
+                <td class="font">{{c.message}}</td>
+                <td class="font">{{c.price}}</td>
+                <td class="font">{{c.startDate}}</td>
+                <td class="font">{{c.title}}</td>
+                <td class="font">{{c.type}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

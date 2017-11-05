@@ -1,0 +1,54 @@
+<div ng-controller="createCompCtrl as main1">
+    <h1 class="font page-header">Create Company</h1>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputID" class="font col-sm-10 ">Company ID</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCompany.id" class="form-control" id="id" placeholder="please type numbers...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCompanyName" class="font col-sm-10 ">Company Name</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCompany.companyName" class="form-control" id="CompanyName" placeholder="please type...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="font col-sm-10 ">Password</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCompany.password" class="form-control" id="password" placeholder="please type...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="font col-sm-10">Email</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCompany.email" class="form-control" id="Email" placeholder="please type...">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-3">
+        <button ng-click="main1.createCompany()" class="btn btn-default">Create Company</button>
+      </div>
+    </div>
+  </form>
+  <h3 class="font sub-header">Company Details</h3>
+
+  <table class="table table-responsive">
+    <thead>
+        <tr>
+            <th class="font">Name</th>
+            <th class="font">Email</th>
+            <th class="font">ID</th>
+            <th class="font">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="font">{{main1.compObj.companyName}}</td>
+            <td class="font">{{main1.compObj.email}}</td>
+            <td class="font">{{main1.compObj.id}}</td>
+            <td class="font">{{main1.compObj.password}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

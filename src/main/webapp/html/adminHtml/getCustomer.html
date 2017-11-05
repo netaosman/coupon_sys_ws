@@ -1,0 +1,36 @@
+<div ng-controller="getCustCtrl as main1">
+    <h1 class="font page-header">Get Customer</h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputCompanyId" class="font col-sm-10 ">Customer ID</label>
+            <div class="col-sm-6">
+                <input type="text" ng-model="main1.custId" class="form-control" placeholder="please type numbers...">
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <button ng-click="main1.getCustById()" class="btn btn-default">Get Customer</button>
+                <br>
+            </div>
+        </div>
+    </form>
+    <h3 class="font sub-header">Customer Details</h3>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">Name</th>
+                <th class="font">ID</th>
+                <th class="font">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="font">{{main1.custObj.custName}}</td>
+                <td class="font">{{main1.custObj.id}}</td>
+                <td class="font">{{main1.custObj.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,121 @@
+<div ng-controller="createCoupCtrl as main1">
+  <h1 class="font page-header">Create Coupon</h1>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputAmount" class="font col-sm-10 ">Amount</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCoup.amount" class="form-control" id="amount" placeholder="please type numbers...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputStartDate" class="font col-sm-10 ">Start Date</label>
+      <div class="col-sm-6">
+        <input type="date" ng-model="main1.newCoup.startDate" class="form-control" id="startDate" placeholder="please type...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEndDate" class="font col-sm-10 ">End Date</label>
+      <div class="col-sm-6">
+        <input type="date" ng-model="main1.newCoup.endDate" class="form-control" id="endDate" placeholder="please type...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCoupID" class="font col-sm-10 ">ID</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCoup.id" class="form-control" id="id" placeholder="please type numbers...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputMessage" class="font col-sm-10 ">Message</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCoup.message" class="form-control" id="message" placeholder="please type...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPrice" class="font col-sm-10">Price</label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="main1.newCoup.price" class="form-control" id="price" placeholder="please type...">
+      </div>
+    </div>
+
+    <fieldset class="form-group">
+      <div class="font col-sm-6">
+        <legend>Coupon Type</legend>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="RESTURANS"
+              checked> Resturans
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="ELECTRICITY"
+              checked> Electricity
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="FOOD" checked> Food
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="HEALTH" checked> Health
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="SPORTS" checked> Sports
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="CAMPING" checked> Camping
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" ng-model="main1.newCoup.type" class="form-check-input" name="optionsType" id="type" value="TRAVELLING"
+              checked> Travelling
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="form-group">
+      <div class="col-sm-3">
+        <button ng-click="main1.createCoupon()" class="btn btn-default">Create Coupon</button>
+      </div>
+    </div>
+  </form>
+  <h3 class="font sub-header">Coupon Details</h3>
+
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th class="font">Amount</th>
+        <th class="font">EndDate</th>
+        <th class="font">ID</th>
+        <th class="font">Image</th>
+        <th class="font">Message</th>
+        <th class="font">Price</th>
+        <th class="font">StartDate</th>
+        <th class="font">Title</th>
+        <th class="font">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="font">{{main1.coupObj.amount}}</td>
+        <td class="font">{{main1.coupObj.endDate}}</td>
+        <td class="font">{{main1.coupObj.id}}</td>
+        <td class="font">{{main1.coupObj.image}}</td>
+        <td class="font">{{main1.coupObj.message}}</td>
+        <td class="font">{{main1.coupObj.price}}</td>
+        <td class="font">{{main1.coupObj.startDate}}</td>
+        <td class="font">{{main1.coupObj.title}}</td>
+        <td class="font">{{main1.coupObj.type}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

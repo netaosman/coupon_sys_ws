@@ -1,0 +1,80 @@
+<div ng-controller="getCoupTypeCtrl as main1">
+    <h1 class="font page-header">Get Coupon By Type</h1>
+    <form class="form-horizontal">
+        <fieldset class="form-group">
+            <div class="font col-sm-6">
+                <legend>Coupon Type</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="RESTURANS" checked> Resturans
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="ELECTRICITY" checked> Electricity
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="FOOD" checked> Food
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="HEALTH" checked> Health
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="SPORTS" checked> Sports
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="CAMPING" checked> Camping
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" ng-model="main1.coupType" class="form-check-input" name="optionsType" id="type" value="TRAVELLING" checked> Travelling
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="col-sm-3">
+            <button ng-click="main1.getCoupByType()" class="btn btn-default">Create Coupon</button>
+        </div>
+    </form>
+    <br>
+    <br>
+    <h3 class="font sub-header">Coupon Details</h3>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">Amount</th>
+                <th class="font">EndDate</th>
+                <th class="font">ID</th>
+                <th class="font">Image</th>
+                <th class="font">Message</th>
+                <th class="font">Price</th>
+                <th class="font">StartDate</th>
+                <th class="font">Title</th>
+                <th class="font">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="font">{{main1.coupObj.amount}}</td>
+                <td class="font">{{main1.coupObj.endDate}}</td>
+                <td class="font">{{main1.coupObj.id}}</td>
+                <td class="font">{{main1.coupObj.image}}</td>
+                <td class="font">{{main1.coupObj.message}}</td>
+                <td class="font">{{main1.coupObj.price}}</td>
+                <td class="font">{{main1.coupObj.startDate}}</td>
+                <td class="font">{{main1.coupObj.title}}</td>
+                <td class="font">{{main1.coupObj.type}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

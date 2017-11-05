@@ -1,0 +1,24 @@
+<div ng-controller="companiesCtrl as companyTable">
+ <h1 class="font page-header">Get All Companies</h1>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">#</th>
+                <th class="font">Name</th>
+                <th class="font">Email</th>
+                <th class="font">ID</th>
+                <th class="font">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="c in companyTable.companies">
+                <th class="font" scope="row">{{$index}}</th>
+                <td class="font">{{c.companyName}}</td>
+                <td class="font">{{c.email}}</td>
+                <td class="font">{{c.id}}</td>
+                <td class="font">{{c.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

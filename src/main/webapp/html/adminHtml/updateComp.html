@@ -1,0 +1,77 @@
+<div ng-controller="updateCompCtrl as main1">
+	<h1 class="font page-header">Update Company</h1>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="inputID" class="font col-sm-6">Company ID</label>
+			<p class="font col-sm-10">
+				<small>Please, type the<mark> current id.</mark> Know that
+					you <mark> can't update the the id.</mark>
+				</small>
+			</p>
+			<div class="col-sm-6">
+				<input type="text" ng-model="main1.compToUpdate.id" class="form-control"
+					id="id" placeholder="type numbers...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputCompanyName" class="font col-sm-10 ">Company
+				Name</label>
+			<p class="font col-sm-10">
+				<small>Please, type the <mark> current company name.</mark> Know
+					that you <mark> can't update the the company name.</mark>
+				</small>
+			</p>
+			<div class="col-sm-6">
+				<input type="text" ng-model="main1.compToUpdate.companyName"
+					class="form-control" id="id" placeholder="please type...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword" class="font col-sm-10 ">Password</label>
+			<p class="font col-sm-10">
+				<small>Please type <mark>new password</mark> for updating.
+				</small>
+			</p>
+			<div class="col-sm-6">
+				<input type="text" ng-model="main1.compToUpdate.password"
+					class="form-control" id="password" placeholder="please type...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail" class="font col-sm-10">Email</label>
+			<p class="font col-sm-10">
+				<small>Please type <mark>new email</mark> for updating.
+				</small>
+			</p>
+			<div class="col-sm-6">
+				<input type="text" ng-model="main1.compToUpdate.email"
+					class="form-control" id="Email" placeholder="please type...">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-4">
+				<button ng-click="main1.updateComp()" class="btn btn-default">Update
+					Company</button>
+			</div>
+		</div>
+	</form>
+	<h3 class="font sub-header">Company Details</h3>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">Name</th>
+                <th class="font">Email</th>
+                <th class="font">ID</th>
+                <th class="font">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="font">{{main1.compObj.companyName}}</td>
+                <td class="font">{{main1.compObj.email}}</td>
+                <td class="font">{{main1.compObj.id}}</td>
+                <td class="font">{{main1.compObj.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

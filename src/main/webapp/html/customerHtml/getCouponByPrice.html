@@ -1,0 +1,48 @@
+<div ng-controller="getCoupByPriceCtrl as main1">
+    <h1 class="font page-header">Get Coupon By Price</h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputCouponId" class="font col-sm-10 ">Coupon Price</label>
+            <div class="col-sm-6">
+                <input type="text" ng-model="main1.coupPrice" class="form-control" placeholder="please type numbers...">
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <button ng-click="main1.getCoupByPrice()" class="btn btn-default">Get Coupon</button>
+                <br>
+            </div>
+        </div>
+    </form>
+    <h3 class="font sub-header">Coupon Details</h3>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">Amount</th>
+                <th class="font">End-Date</th>
+                <th class="font">ID</th>
+                <th class="font">Image</th>
+                <th class="font">Message</th>
+                <th class="font">Price</th>
+                <th class="font">Start-Date</th>
+                <th class="font">Title</th>
+                <th class="font">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="font">{{main1.coupObj.amount}}</td>
+                <td class="font">{{main1.coupObj.endDate}}</td>
+                <td class="font">{{main1.coupObj.id}}</td>
+                <td class="font">{{main1.coupObj.image}}</td>
+                <td class="font">{{main1.coupObj.message}}</td>
+                <td class="font">{{main1.coupObj.price}}</td>
+                <td class="font">{{main1.coupObj.startDate}}</td>
+                <td class="font">{{main1.coupObj.title}}</td>
+                <td class="font">{{main1.coupObj.type}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

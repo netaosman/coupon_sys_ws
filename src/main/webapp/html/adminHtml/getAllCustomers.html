@@ -1,0 +1,22 @@
+<div ng-controller="customersCtrl as customersTable">
+ <h1 class="font page-header">Get All Customers</h1>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th class="font">#</th>
+                <th class="font">Name</th>
+                <th class="font">ID</th>
+                <th class="font">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="c in customersTable.customers">
+                <th class="font" scope="row">{{$index}}</th>
+                <td class="font">{{c.custName}}</td>
+                <td class="font">{{c.id}}</td>
+                <td class="font">{{c.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
